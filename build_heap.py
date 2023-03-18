@@ -37,7 +37,7 @@ def main():
         if 'a' in filename:
             print("Invalid filename")
             exit()
-        filename = "test/" + filename
+        filename = "tests/" + filename
         with open(filename, 'r') as file:
             n = int(file.readline())
             data = [int(x) for x in file.readline().split()]
