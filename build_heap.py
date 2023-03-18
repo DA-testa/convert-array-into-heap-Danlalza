@@ -8,7 +8,8 @@ def build_heap(data):
     # try to achieve  O(n) and not O(n2)
     
     n = len(data)
-    for i in range(n // 2, -1, -1):
+    i = n // 2
+    while i >= 0:
         j = i
         while j * 2 + 1 < n:
             k = j * 2 + 1
@@ -20,6 +21,7 @@ def build_heap(data):
                 j = k
             else:
                 break
+        i -= 1
     return swaps
 
 def main():
